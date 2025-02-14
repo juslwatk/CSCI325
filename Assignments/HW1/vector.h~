@@ -1,0 +1,36 @@
+#ifndef Vector_h
+#define VECTOR_H
+
+#include <iostream>
+
+class Vector {
+
+ private:
+  int *vec_ptr; // Points to the dynamic array
+  int vec_size; // Current # of elements
+  int vec_capacity; // Allocated capacity of array
+
+ public:
+
+  Vector();
+
+
+  Vector(const Vector &other);
+
+  ~Vector();
+
+
+  Vector& operator=(const Vector &other);
+
+  int size();
+
+  int capacty();
+
+  void push_back(int elements);
+
+  void reserve(int n);
+
+  int& operator[](unsigned int index);
+};
+
+#endif
